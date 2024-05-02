@@ -1,0 +1,37 @@
+[project]
+name = "memchunks-test"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "karmacoma", email = "karma@coma.lol" }
+]
+dependencies = [
+    "sortedcontainers>=2.4.0",
+    "pytest>=8.2.0",
+    "pytest-benchmark[histogram]>=4.0.0",
+    "z3-solver>=4.13.0.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+hello = "memchunks_test:hello"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/memchunks_test"]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
