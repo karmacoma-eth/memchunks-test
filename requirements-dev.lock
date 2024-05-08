@@ -27,7 +27,6 @@ pytest==8.2.0
     # via pytest-benchmark
 pytest-benchmark==4.0.0
     # via memchunks-test
-    # via pytest-benchmark
 sortedcontainers==2.4.0
     # via memchunks-test
 z3-solver==4.13.0.0
